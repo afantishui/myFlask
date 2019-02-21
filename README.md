@@ -1,6 +1,5 @@
 # myFlask
 自学--一个基于flask的web应用诞生<br>
-登录页http://47.107.208.146:5000/login
 <br>
 ## 环境
 系统:linux<br>
@@ -19,3 +18,4 @@ pip install flask-bootstrap  #安装flask-bootstrap模块
 ```python
 python manger.py
 ```
+登录页http://47.107.208.146:5000/login<br>
