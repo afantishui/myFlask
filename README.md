@@ -6,6 +6,10 @@
 语言:python<br>
 框架:flask<br>
 模块:flask-bootstrap <br>
+flask-sqlalchemy SQLAlchemy数据库框架的flask集成包<br>
+flask-script flask命令行脚本扩展 <br>
+PyMySQL库<br>
+flask-migrate   数据库迁移插件<br>
 <br>
 ## 安装
 ```python
