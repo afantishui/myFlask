@@ -45,3 +45,15 @@ pip install flask-bootstrap<br>
 方法二：已经安装在2.7上面，重新再安装一个<br>
 执行pip3 install flask-bootstrap<br>
 如果没有pip3执行 apt install python3-pip进行安装<br>
+
+3.使用shell建立数据库表OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+") (Background on this error at: http://sqlalche.me/e/e3q8)<br>
+解决：服务器上面没有mysql  <br>
+重新安装一个https://blog.csdn.net/Erice_s/article/details/80021718<br>
+
+4.使用flask-script模块让flask支持命令行脚本使用manager.run代替app.run()；本地执行python default.py runserver时正常，上传到linux就会访问不了<br>
+解决：<br>
+cd /usr/local/lib/python3.5/dist-packages/flask_script<br>
+vim commands.py<br>
+把host='127.0.0.1'改成'0.0.0.0'(使用/host搜索)<br>
+
