@@ -6,10 +6,13 @@
 语言:python<br>
 框架:flask<br>
 模块:flask-bootstrap <br>
+### 连接数据库
+使用模块:<br>
 flask-sqlalchemy SQLAlchemy数据库框架的flask集成包<br>
 flask-script flask命令行脚本扩展 <br>
 PyMySQL库<br>
 flask-migrate   数据库迁移插件<br>
+mysql连接字符串  ‘mysql://[user]:[password]@[domain]:[por]/[dbname]’
 <br>
 ## 安装
 ```python
@@ -20,7 +23,8 @@ pip install flask-bootstrap  #安装flask-bootstrap模块
 ```
 ## 运行
 ```python
-python manger.py
+# python manager.py
+python manager.py runserver
 ```
 登录页http://47.107.208.146:5000/login<br>
 ### 问题小记
