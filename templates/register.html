@@ -1,53 +1,22 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html"%}
+{% block content %} <!--具体内容-->
+{% import "bootstrap/wtf.html" as wtf %} <!--导入bootstrap模板 -->
 <div class="container">
-    <div class="row"></div>
-    <div class="row">
-        <div>
-            <div class="page-header">
-                <h1>欢迎您注册</h1>
-            </div>
-            {% for message in get_flashed_messages() %}
-            <div class="alert alert-warning">
-                <button type="button" class="clsoe" data-dismiss="alter"></button>  # 关闭按钮
-                {{messages}}
-            </div>
-            {% endfor%}
-            <form method="post">
-                <div class="form-group">
-                    <label for="username">用户名</label>
-                    <input type="text" class="form-control" name="username" id="username" placeholder="请输入用户名">
-                </div>
-                <div class="form-group">
-                    <label for="password">密码</label>
-                    <input type="password" class="form-control" name="password" id="password" placeholder="请输入密码">
-                </div>
-                <div class="form-group">
-                    <label for="nickname">昵称</label>
-                    <input type="text" class="form-control" name="nickname" id="nickname" placeholder="请输入昵称">
-                </div>
-                <div class="form-group">
-                    <label for="birthday">生日</label>
-                    <input type="date" class="form-control" name="birthday" id="birthday" placeholder="请输入生日">
-                </div>
-                <div class="form-group">
-                    <label for="mobile">手机</label>
-                    <input type="text" class="form-control" name="mobile" id="mobile" placeholder="请输入手机号">
-                </div>
-                <div class="form-group">
-                    <label class="form-control">
-                        <label >性别</label>
-                        <input type="radio" name="gender" value="0" id="gender0"><label for="gender0">男</label>
-                        <input type="radio" name="gender" value="1" id="gender1"><label for="gender1">女</label>
-                    </label>
-                </div>
-                <div class="form-group">
-                    <label for="email">邮箱</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="请输入邮箱">
-                </div>
-                <button type="submit" class="btn btn-default">登录</button>
-            </form>
-        </div>
-    </div>
+ <div class="row"></div>
+ <div class="row">
+
+  <div>
+   <div class="page-header">
+    <h1>欢迎您注册</h1>
+   </div>
+   {% for message in get_flashed_messages() %}
+   <div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alter">×</button>
+    {{message}}
+   </div>
+   {% endfor %}
+   {{ wtf.quick_form(form)}} <!--创建表单-->
+  </div>
+ </div>
 </div>
 {% endblock %}
