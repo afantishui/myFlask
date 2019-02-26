@@ -60,3 +60,7 @@ vim commands.py<br>
 5.sqlalchemy.exc.InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (pymysql.err.IntegrityError) (1452, 'Cannot add or update a child row: a foreign key constraint fails (`myFlask`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`))') [SQL: 'INSERT INTO users (username, password, nickname, email, birthday, gender, moblie, role_id) VALUES (%(username)s, %(password)s, %(nickname)s, %(email)s, %(birthday)s, %(gender)s, %(moblie)s, %(role_id)s)'] [parameters: {'username': 'a', 'password': '123', 'nickname': 'b', 'email': '1@1.com', 'birthday': datetime.date(1991, 1, 1), 'gender': '0', 'moblie': '123', 'role_id': 1}]<br>
 提交注册时user表插入的数据用外键的id在roles表中不存在，users表与roles表相互关联<br>
 解决：需要在roles表建一个id为1，name为用户<br>
+
+6.建立目录结构，对文件进行重构，对视图方法使用蓝本功能Blueprint,视图方法迁移后报<br>
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?<br>
+解决：在login.html的url_for(‘login’) ，改成url_for(‘auth.login’)<br>
