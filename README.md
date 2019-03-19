@@ -23,8 +23,8 @@ pip install flask-bootstrap  #安装flask-bootstrap模块
 ```
 ## 运行
 ```python
-# python manager.py
-python manager.py runserver
+# python manage.py
+python manage.py runserver
 ```
 登录页http://47.107.208.146:5000/login<br>
 ### 问题小记
