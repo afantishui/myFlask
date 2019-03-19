@@ -26,7 +26,7 @@ pip install flask-bootstrap  #安装flask-bootstrap模块
 # python manage.py
 python manage.py runserver
 ```
-登录页http://47.107.208.146:5000/login<br>
+登录页http://47.106.82.186:5000/login<br>
 ### 问题小记
 1.RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.<br>
 解决：
